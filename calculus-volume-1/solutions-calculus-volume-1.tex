@@ -1,8 +1,4 @@
-\documentclass{article}
-% General document formatting
-\usepackage[margin=0.7in]{geometry}
-\usepackage[parfill]{parskip}
-\usepackage[utf8]{inputenc}
+\documentclass[letterpaper]{memoir}
 
 % Related to math
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
@@ -11,22 +7,21 @@
 \usepackage{enumitem}
 
 % For header and footer
-\usepackage{fancyhdr}
+\makepagestyle{plain}
+\makeevenfoot{plain}{}{\footnotesize Based on the book Calculus Volume 1. Download for free at https://openstax.org/details/books/calculus-volume-1.}{}
+\makeoddfoot{plain}{}{Based on the book Calculus Volume 1. Download for free at https://openstax.org/details/books/calculus-volume-1.}{}
 
-\newcommand*\footerfont{\footnotesize}
-
-\fancyhf{}
-\fancyfoot[C]{\footerfont Based on the book Calculus Volume 1, download for free at https://openstax.org/details/books/calculus-volume-1.}
-\renewcommand\headrulewidth{0pt}
-\pagestyle{fancy}
+\pagestyle{plain}
 
 \begin{document}
 
-\section*{Chapter 1: Functions and Graphs}
+\chapter{Functions and Graphs}
 
-\subsection*{Checkpoint Solutions}
+\section*{Checkpoint Solutions}
 
-\subsubsection*{1.1 Evaluating Functions}
+\subsection*{1.1 Evaluating Functions}
+
+\subsubsection*{Instruction}
 
 For the function $ f(x) = x^2 - 3x + 5 $ evaluate
 
@@ -42,7 +37,9 @@ For the function $ f(x) = x^2 - 3x + 5 $ evaluate
   \item $ f(a + h) = (a + h)^2 - 3(a + h) + 5 = a^2 + 2ah + h^2 - 3a - 3h + 5 $
 \end{enumerate}
 
-\subsubsection*{1.2 Finding Domain and Range}
+\subsection*{1.2 Finding Domain and Range}
+
+\subsubsection*{Instruction}
 
 Find the domain and range for $ f(x) = \sqrt{4 - 2x} + 5 $.
 
