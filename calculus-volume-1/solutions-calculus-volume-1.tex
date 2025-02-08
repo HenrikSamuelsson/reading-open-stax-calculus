@@ -1,4 +1,4 @@
-\documentclass[letterpaper]{memoir}
+\documentclass[letterpaper, oneside]{memoir}
 
 % Related to math
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
@@ -9,9 +9,14 @@
 % For header and footer
 \makepagestyle{plain}
 \makeevenfoot{plain}{}{\footnotesize Based on the book Calculus Volume 1. Download for free at https://openstax.org/details/books/calculus-volume-1.}{}
-\makeoddfoot{plain}{}{Based on the book Calculus Volume 1. Download for free at https://openstax.org/details/books/calculus-volume-1.}{}
+\makeoddfoot{plain}{}{\footnotesize Based on the book Calculus Volume 1. Download for free at https://openstax.org/details/books/calculus-volume-1.}{}
 
 \pagestyle{plain}
+
+\setlrmarginsandblock{3.5cm}{3.5cm}{*}
+\setulmarginsandblock{3.5cm}{3.5cm}{*}
+\setheadfoot{24pt}{48pt}
+\checkandfixthelayout
 
 \begin{document}
 
@@ -35,6 +40,13 @@ For the function $ f(x) = x^2 - 3x + 5 $ evaluate
 \begin{enumerate}[label=(\alph*)]
   \item $ f(1) = 1 ^ 2 - 3 \cdot 1 + 5 = 1 - 3 + 5 = 3 $
   \item $ f(a + h) = (a + h)^2 - 3(a + h) + 5 = a^2 + 2ah + h^2 - 3a - 3h + 5 $
+\end{enumerate}
+
+\subsubsection*{Answer}
+
+\begin{enumerate}[label=(\alph*)]
+  \item $ f(1) = 3 $
+  \item $ f(a + h) = a^2 + 2ah + h^2 - 3a - 3h + 5 $
 \end{enumerate}
 
 \subsection*{1.2 Finding Domain and Range}
@@ -75,5 +87,9 @@ Find the domain and range for $ f(x) = \sqrt{4 - 2x} + 5 $.
     ,$$
     there does exist an $ x $ in the domain of $ f $. We conclude that the range of $ f $ is $ \{ y \mid y \ge 5 \} $.
 \end{enumerate}
+
+\subsubsection*{Answer}
+
+Domain $ = \{ x \mid x \le 2 \} $, range $ = \{ y \mid y \ge -4 \} $
 
 \end{document}
