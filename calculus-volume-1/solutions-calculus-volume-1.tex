@@ -46,9 +46,37 @@ For the function $ f(x) = x^2 - 3x + 5 $ evaluate
 
 Find the domain and range for $ f(x) = \sqrt{4 - 2x} + 5 $.
 
+\subsubsection*{Solution}
+
 \begin{enumerate}[label=\roman*]
-  \item To find the domain of $ f $, we need the expression $ 4 - 2x \ge 0 $, due to that real negative numbers do not have a square root. Solving this inequality, we conclude that the domain is $ \{x \mid x \le 2\} $.
-  \item To find the range of $ f $, we note that since $ \sqrt{4 - 2x} \ge 0 $, $ f(x) = \sqrt{4 - 2x} + 5 \ge 5 $. Therefore, the range of $ f $ must be a subset of the set $ \{ y \mid y \ge 5\} $.
+  \item To find the domain of $ f $, we need the expression $ 4 - 2x \ge 0 $, due to that real negative numbers do not have a square root. Solving this inequality, we conclude that the domain is $ \{ x \mid x \le 2 \} $.
+  \item To find the range of $ f $, we note that since $ \sqrt{4 - 2x} \ge 0 $, it follows that $ f(x) = \sqrt{4 - 2x} + 5 \ge 5 $. Therefore, the range of $ f $ must be a subset of the set $ \{ y \mid y \ge 5 \} $.
+
+    To show that every element in this set is in the range of $ f $, we need to show that for all $ y $ in this set, there exists a real number $ x $ in the domain such that $ f(x) = y $. Let $ y \ge 5 $. Then, $ f(x) = y $ if and only if
+    $$ \phantom{.}
+    \sqrt{4 - 2x} + 5 = y
+    .$$
+    Solving this equation for $ x $, we see that $ x $ must solve the equation
+    $$ \phantom{.}
+    \sqrt{4 - 2x}= y - 5
+    .$$
+    Since $ y \ge 5 $, such an $ x $ could exist. Squaring both sides of the above equation we have
+    $$ \phantom{.}
+    4-2x = (y - 5)^2
+    .$$
+    Therefore we need
+    $$ \phantom{,}
+    -2x= (y - 5)^2 - 4
+    ,$$
+    which implies
+    $$ \phantom{,}
+    x= 2 -\frac{(y - 5)^2}{2}
+    .$$
+    We just need to verify that $ x $ is in the domain of $ f $. Since the domain of $ f $ consists of all real numbers less or equal to $ 2 $, and
+    $$ \phantom{,}
+    2 -\frac{(y - 5)^2}{2} \le 2
+    ,$$
+    there does exist an $ x $ in the domain of $ f $. We conclude that the range of $ f $ is $ \{ y \mid y \ge 5 \} $.
 \end{enumerate}
 
 \end{document}
