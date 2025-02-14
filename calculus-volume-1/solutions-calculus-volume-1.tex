@@ -1,4 +1,4 @@
-\documentclass[12pt, letterpaper, oneside]{memoir}
+\documentclass[11pt, letterpaper, oneside]{memoir}
 
 \usepackage[T1]{fontenc}
 \usepackage{mathpazo}
@@ -24,7 +24,7 @@
 
 \section*{Checkpoint Solutions}
 
-\subsection*{1.1 Evaluating Functions}
+\subsection*{Checkpoint 1.1: Evaluating Functions}
 
 \subsubsection*{Instruction}
 
@@ -49,7 +49,7 @@ For the function $ f(x) = x^2 - 3x + 5 $ evaluate
   \item $ f(a + h) = a^2 + 2ah + h^2 - 3a - 3h + 5 $
 \end{enumerate}
 
-\subsection*{1.2 Finding Domain and Range}
+\subsection*{Checkpoint 1.2: Finding Domain and Range}
 
 \subsubsection*{Instruction}
 
@@ -92,7 +92,7 @@ Find the domain and range for $ f(x) = \sqrt{4 - 2x} + 5 $.
 
 Domain $ = \{ x \mid x \le 2 \} $, range $ = \{ y \mid y \ge -4 \} $
 
-\subsection*{1.3 Finding Zeroes}
+\subsection*{Checkpoint 1.3: Finding Zeroes}
 
 \subsubsection*{Instruction}
 
@@ -118,7 +118,7 @@ From the above complete factoring of $ f $, we conclude that there are three zer
 
 $ x = 0, 2, 3 $
 
-\subsection*{1.4 Combining Functions Using Mathematical Operations}
+\subsection*{Checkpoint 1.4: Combining Functions Using Mathematical Operations}
 
 \subsubsection{Instruction}
 
@@ -126,13 +126,17 @@ For $ f(x) = x^2 + 3 $ and $ g(x) = 2x - 5 $, find $ (f/g)(x) $ and state its do
 
 \subsubsection{Solution}
 
-$ \frac{f}{g}(x) = \frac{x^2 + 3}{2x - 5} $. The domain of this function is $ \{ x \mid x \ne \frac{5}{2} \} $.
+To find $ (f/g)(x) $ we write the function with the quotient operator
+$$ \phantom{.}
+\frac{f}{g}(x) = \frac{x^2 + 3}{2x - 5}.
+$$
+The domain of this function is $ \{ x \mid x \ne \frac{5}{2} \} $.
 
 \subsubsection{Answer}
 
 $ \frac{f}{g}(x) = \frac{x^2 + 3}{2x - 5} $. The domain is $ \{ x \mid x \ne \frac{5}{2} \} $.
 
-\subsection*{1.5 Compositions of Functions}
+\subsection*{Checkpoint 1.5: Compositions of Functions}
 
 \subsubsection{Instruction}
 
@@ -146,7 +150,7 @@ $ (f \circ g)(x) = f(g(x)) = f(\sqrt{x}) = 2 - 5\sqrt{x} $
 
 $ (f \circ g)(x) = 2 - 5\sqrt{x} $
 
-\subsection*{1.6 Application Involving a Composite Function}
+\subsection*{Checkpoint 1.6: Application Involving a Composite Function}
 
 \subsubsection{Instruction}
 
@@ -175,7 +179,7 @@ $ (g \circ f)(x) = 0.63x $
 
 For the following exercises, (a) determine the domain and the range of each relation, and (b) state whether the relation is a function.
 
-\subsection*{1.1.1}
+\subsection*{Exercise 1.1.1}
 
 \subsubsection{Instruction}
 
@@ -218,7 +222,7 @@ Relation:
   \item Yes, a function
 \end{enumerate}
 
-\subsection*{1.1.2}
+\subsection*{Exercise 1.1.2}
 
 \subsubsection{Instruction}
 
@@ -259,6 +263,49 @@ Relation:
 \begin{enumerate}[label=(\alph*)]
   \item Domain = $ \{ -3, -2, -1, 0, 1, 2, 3 \} $, range = $ \{ -8, -2, -1, 0, 1, 8\} $
   \item Yes, a function
+\end{enumerate}
+
+\subsection*{Exercise 1.1.3}
+
+\subsubsection{Instruction}
+
+Relation:
+
+\begin{table}[h]
+  \begin{tabular}{ r r }
+    \hline
+    $ x $ & $ y $ \\
+    \hline
+    $ 1 $ & $ -3 $ \\
+    $ 2 $ & $ -2 $ \\
+    $ 3 $ & $ -1 $ \\
+    $ 0 $ & $ 0 $ \\
+    $ 1 $ & $ 1 $ \\
+    $ 2 $ & $ 2 $ \\
+    $ 3 $ & $ 3 $ \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsubsection{Solution}
+
+\begin{enumerate}[label=(\alph*)]
+  \item The domain of the relation is the set of unique $ x $ values,
+    $$ \phantom{.}
+    \{ 0, 1, 2, 3 \}
+    .$$
+    The range of the relation is the set of unique $ y $ values,
+    $$ \phantom{.}
+    \{ -3, -2, -1, 0, 1, 2, 3 \}
+    .$$
+  \item This relation is not function, due to that each input is not assigned to exactly one output. Take for example $ x = 1 $ that can cause both $ y = -3 $ and $ y = 1 $.
+\end{enumerate}
+
+\subsubsection{Answer}
+
+\begin{enumerate}[label=(\alph*)]
+  \item Domain = $ \{ 0, 1, 2, 3 \} $, range = \{ -3, -2, -1, 0, 1, 2, 3 \}
+  \item No, not a function
 \end{enumerate}
 
 \end{document}
