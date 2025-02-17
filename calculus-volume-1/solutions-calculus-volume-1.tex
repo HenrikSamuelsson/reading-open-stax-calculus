@@ -10,6 +10,9 @@
 % For math, such as \aligned
 \usepackage{amsmath}
 
+% To sometimes be able to avoid over full h-boxes
+\usepackage{microtype}
+
 % For header and footer
 \makepagestyle{plain}
 \makeevenfoot{plain}{}{\footnotesize Based on the book Calculus Volume 1. Download for free at https://openstax.org/details/books/calculus-volume-1.}{}
@@ -524,5 +527,17 @@ Find the below values for the function $ f(x) = 4x^2 - 3x + 1 $, if they exist, 
   \item $ 4a^2 - 3a + 1 $.
   \item $ 4a^2 + 4h^2 + 8ah -3a - 3h + 1 $.
 \end{enumerate}
+
+\subsection*{Exercise 1.1.15}
+
+Find the domain, range, and all zeros/intercepts, if any, of the function $ g(x) = \sqrt{8x - 1} $.
+
+\subsubsection{Solution}
+
+The domain of the square root function is $ \left[ 0, \infty \right) $, which implies $ 8x - 1 \ge 0 $. Solving for $ x $ gives $ x \ge \frac{1}{8} $.
+
+\subsubsection{Answer}
+
+Domain = $ x \ge \frac{1}{8} $.
 
 \end{document}
