@@ -1,19 +1,19 @@
 \documentclass[11pt, letterpaper, oneside]{memoir}
 
 \usepackage[T1]{fontenc}
-% For typesetting math to mach the Palatino font
+% For typesetting math to mach the Palatino font.
 \usepackage{mathpazo}
 
-% For lists
+% For lists.
 \usepackage{enumitem}
 
-% For math, such as \aligned
+% For math, such as \aligned.
 \usepackage{amsmath}
 
-% To sometimes be able to avoid over full h-boxes
+% To sometimes be able to avoid over full h-boxes.
 \usepackage{microtype}
 
-% For header and footer
+% For header and footer.
 \makepagestyle{plain}
 \makeevenfoot{plain}{}{\footnotesize Based on the book Calculus Volume 1. Download for free at https://openstax.org/details/books/calculus-volume-1.}{}
 \makeoddfoot{plain}{}{\footnotesize Based on the book Calculus Volume 1. Download for free at https://openstax.org/details/books/calculus-volume-1.}{}
@@ -534,7 +534,14 @@ Find the domain, range, and all zeros/intercepts, if any, of the function $ g(x)
 
 \subsubsection{Solution}
 
-The domain of the square root function is $ \left[ 0, \infty \right) $, which implies $ 8x - 1 \ge 0 $. Solving for $ x $ gives $ x \ge \frac{1}{8} $.
+\begin{enumerate}[label=\roman*]
+  \item The domain of the square root function is $ \left[ 0, \infty \right) $, which implies $ 8x - 1 \ge 0 $. Solving for $ x $ gives $ x \ge \frac{1}{8} $.
+
+  \item To find the range of $ g $, we note that $ \sqrt{8x - 1} \ge 0 $. Therefore, the range of $ g $ must be a subset of the set $ \{y \mid y \ge 0\} $. To show that every element in this set is in the range of $ g $, we need to show that for all $ y $ in this set, there exists a real number $ x $ in the domain such that $ f(x) = y $. Let $ y \ge 0 $. Then $ g(x) = y $ if and only if
+    $$ \phantom{.}
+    \sqrt{8x - 1} = y
+    .$$
+\end{enumerate}
 
 \subsubsection{Answer}
 
