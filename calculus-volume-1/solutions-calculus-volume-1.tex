@@ -537,14 +537,34 @@ Find the domain, range, and all zeros/intercepts, if any, of the function $ g(x)
 \begin{enumerate}[label=\roman*]
   \item The domain of the square root function is $ \left[ 0, \infty \right) $, which implies $ 8x - 1 \ge 0 $. Solving for $ x $ gives $ x \ge \frac{1}{8} $.
 
-  \item To find the range of $ g $, we note that $ \sqrt{8x - 1} \ge 0 $. Therefore, the range of $ g $ must be a subset of the set $ \{y \mid y \ge 0\} $. To show that every element in this set is in the range of $ g $, we need to show that for all $ y $ in this set, there exists a real number $ x $ in the domain such that $ f(x) = y $. Let $ y \ge 0 $. Then $ g(x) = y $ if and only if
+  \item To find the range of $ g $, we note that $ \sqrt{8x - 1} \ge 0 $. Therefore, the range of $ g $ must be a subset of the set $ \{y \mid y \ge 0\} $. To show that every element in this set is in the range of $ g $, we need to show that for a given $ y $ in this set, there exists a real number $ x $ in the domain such that $ g(x) = y $.
+
+    Let $ y \ge 0 $. Then $ g(x) = y $ if and only if
     $$ \phantom{.}
     \sqrt{8x - 1} = y
     .$$
+
+    We are interested in $ x $, and will solve this equation for $ x $. Since $ y \ge 0 $ such an $ x $ could exist. Squaring both sides of this equation, we have
+    $$ \phantom{.}
+    {8x - 1} = y^2
+    .$$
+    Therefore, we need
+    $$ \phantom{.}
+    8x = y^2 + 1
+    ,$$
+    which implies
+    $$ \phantom{.}
+    x = \frac{y^2 + 1}{8}
+    .$$
+    We just need to verify that $ x $ is in the domain of $ g $. Since the domain of $ g $ consists of all real numbers greater than or equal to $ 1 / 8 $, and
+    $$ \phantom{.}
+    \frac{y^2 + 1}{8} \ge \frac{1}{8}
+    ,$$
+    there does exist an $ x $ in the domain of $ g $. We conclude that the range of $ g $ is $ \{ y \mid y \ge 0 \} $.
 \end{enumerate}
 
 \subsubsection{Answer}
 
-Domain = $ x \ge \frac{1}{8} $.
+Domain = $ x \ge \frac{1}{8} $, range = $ \{ y \mid y \ge 0 \} $.
 
 \end{document}
