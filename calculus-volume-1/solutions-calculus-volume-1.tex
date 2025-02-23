@@ -602,7 +602,7 @@ Sketch the graph for the function $ f(x) = 3x - 6 $ with the aid of table \ref{t
 Begin by sketching the axes. We choose the same scale on both axes to not distort the graph. We choose the range for both axes to be -15 to 15, allowing us to plot all the points from table \ref{table:exercise-1.1.23}.
 
 \bigskip
-\begin{figure}[htbp]
+\begin{figure}[ht]
   \centering
   \begin{tikzpicture}
     \centering
@@ -624,7 +624,7 @@ Begin by sketching the axes. We choose the same scale on both axes to not distor
 After having sketched the axes we add markers based on the data in table \ref{table:exercise-1.1.23}.
 
 \bigskip
-\begin{figure}[htbp]
+\begin{figure}[ht]
   \centering
   \begin{tikzpicture}
     \centering
@@ -653,8 +653,7 @@ After having sketched the axes we add markers based on the data in table \ref{ta
 
 We then connect the markers with line segments. In this particular case the result will be a single straight line so we can use a ruler when sketching.
 
-\bigskip
-\begin{figure}[htbp]
+\begin{figure}[ht]
   \centering
   \begin{tikzpicture}
     \centering
@@ -685,6 +684,33 @@ We then connect the markers with line segments. In this particular case the resu
     \end{axis}
   \end{tikzpicture}
 \end{figure}
-\bigskip
+
+\subsubsection*{Answer}
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}
+    \centering
+    \begin{axis}[
+        axis x line = center,
+        axis y line = center,
+        xlabel = \( x \),
+        ylabel = \( y \),
+        xmin = -17.5, xmax = 17.5,
+        ymin = -17.5, ymax = 17.5,
+        xtick distance = 5,
+        ytick distance = 5,
+        legend pos = south east,
+      ]
+      \addplot [
+        domain=-17.5:17.5,
+        samples=100,
+        color=blue,
+      ]
+      {3 * x - 6};
+      \addlegendentry{\( 3x - 6 \)}
+    \end{axis}
+  \end{tikzpicture}
+\end{figure}
 
 \end{document}
