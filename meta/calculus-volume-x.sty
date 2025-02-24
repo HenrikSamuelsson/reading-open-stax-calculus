@@ -1,0 +1,28 @@
+\usepackage[T1]{fontenc}
+% For typesetting math to mach the Palatino font.
+\usepackage{mathpazo}
+
+% For lists.
+\usepackage{enumitem}
+
+% For math, such as \aligned.
+\usepackage{amsmath}
+
+% To sometimes be able to avoid over full h-boxes.
+\usepackage{microtype}
+
+% Graph creation
+\usepackage{pgfplots}
+%\pgfplotsset{width = 10cm, compat = 1.9}
+
+% For header and footer.
+\makepagestyle{plain}
+\makeevenfoot{plain}{}{\footnotesize Based on the book Calculus Volume 1. Download for free at https://openstax.org/details/books/calculus-volume-1.}{}
+\makeoddfoot{plain}{}{\footnotesize Based on the book Calculus Volume 1. Download for free at https://openstax.org/details/books/calculus-volume-1.}{}
+
+\pagestyle{plain}
+
+\setlrmarginsandblock{3.5cm}{3.5cm}{*}
+\setulmarginsandblock{3.5cm}{3.5cm}{*}
+\setheadfoot{24pt}{48pt}
+\checkandfixthelayout

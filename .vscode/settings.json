@@ -1,10 +1,27 @@
 {
     "cSpell.words": [
+        "amsmath",
+        "checkandfixthelayout",
         "compatiblelicenses",
         "creativecommons",
+        "enumitem",
+        "fontenc",
+        "footnotesize",
+        "makeevenfoot",
+        "makeoddfoot",
+        "makepagestyle",
+        "mathpazo",
+        "microtype",
+        "pagestyle",
         "Palatino",
+        "pgfplots",
+        "pgfplotsset",
+        "setheadfoot",
+        "setlrmarginsandblock",
+        "setulmarginsandblock",
         "Stax",
         "sublicensable",
+        "usepackage",
         "waivable"
     ]
 }
