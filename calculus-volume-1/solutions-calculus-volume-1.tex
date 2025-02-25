@@ -615,7 +615,6 @@ After having sketched the axes we add markers based on the data in table \ref{ta
       ]
       \addplot[
         only marks,
-        color = blue,
         mark = *,
       ]
       coordinates {
@@ -646,16 +645,14 @@ We then connect the markers with line segments. In this particular case the resu
       ]
       \addplot[
         only marks,
-        color = blue,
         mark = *,
       ]
       coordinates {
         (-3,-15)(-2,-12)(-1,-9)(0,-6)(1,-3)(2,0)(3,3)
       };
       \addplot [
-        domain=-17.5:17.5,
-        samples=100,
-        color=blue,
+        domain = -17.5:17.5,
+        samples = 100,
       ]
       {3 * x - 6};
     \end{axis}
@@ -682,9 +679,8 @@ We then connect the markers with line segments. In this particular case the resu
         legend pos = south east,
       ]
       \addplot [
-        domain=-17.5:17.5,
-        samples=100,
-        color=blue,
+        domain = -17.5:17.5,
+        samples = 100,
       ]
       {3 * x - 6};
       \addlegendentry{\( 3x - 6 \)}
