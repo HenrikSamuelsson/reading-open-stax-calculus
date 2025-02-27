@@ -691,7 +691,34 @@ We then connect the markers with line segments. In this particular case the resu
 
 \subsection*{Exercise 1.1.29}
 
-Use the vertical line test to determine whether the given graph represent a function. Assume that the graph continues at both ends beyond the given grid. If the graph represents a function, then determine the following for the graph:
+Use the vertical line test to determine whether the graph in figure \ref{figure:exercise-1.1.29} represent a function. Assume that the graph continues at both ends beyond the given grid. If the graph represents a function, then determine the following for the graph:
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \centering
+    \begin{axis}[
+        axis x line = center,
+        axis y line = center,
+        xlabel = \( x \),
+        ylabel = \( y \),
+        xmin = -5.5, xmax = 5.5,
+        ymin = -5.5, ymax = 5.5,
+        xtick distance = 1,
+        ytick distance = 1,
+        grid = major,
+        width=.75\textwidth
+      ]
+      \addplot [
+        domain = -2:2,
+        samples = 200,
+      ]
+      {x^4 - 2*x^2 + 1};
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Graph for exercise 1.1.29}
+  \label{figure:exercise-1.1.29}
+\end{figure}
 
 \begin{enumerate}[label=(\alph*)]
   \item Domain and range
