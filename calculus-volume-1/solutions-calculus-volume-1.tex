@@ -706,8 +706,7 @@ Use the vertical line test to determine whether the graph in figure \ref{figure:
         ymin = -5.5, ymax = 5.5,
         xtick distance = 1,
         ytick distance = 1,
-        grid = major,
-        width=.75\textwidth
+        width = .80\textwidth
       ]
       \addplot [
         domain = -2:2,
@@ -730,5 +729,46 @@ Use the vertical line test to determine whether the graph in figure \ref{figure:
   \item Symmetry about any axis and/or the origin
   \item Whether the function is even, odd, or neither
 \end{enumerate}
+
+\subsubsection{Solution}
+
+The graph in figure \ref{figure:exercise-1.1.29} do represent a function because every vertical line that may be drawn intersects the graph no more than once. See figure \ref{figure:exercise-1.1.29-vertical-line-test} for an example of a vertical line with one intersection of the graph.
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \centering
+    \begin{axis}[
+        axis x line = center,
+        axis y line = center,
+        xlabel = \( x \),
+        ylabel = \( y \),
+        xmin = -5.5, xmax = 5.5,
+        ymin = -5.5, ymax = 5.5,
+        xtick distance = 1,
+        ytick distance = 1,
+        width = .80\textwidth
+      ]
+      % Plot the graph.
+      \addplot [
+        domain = -2:2,
+        samples = 100,
+      ]
+      {x^4 - 2*x^2 + 1};
+      % Plot a vertical line.
+      \addplot[
+        no marks,
+      ]
+      coordinates{(0.5,5.5) (0.5,-5.5)};
+      % Mark the intersection between the plot and the vertical line.
+      \addplot[
+        mark = *,
+      ]
+      coordinates{(0.5,0.5625)};
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Vertical line test illustration}
+  \label{figure:exercise-1.1.29-vertical-line-test}
+\end{figure}
 
 \end{document}
