@@ -693,6 +693,17 @@ We then connect the markers with line segments. In this particular case the resu
 
 Use the vertical line test to determine whether the graph in figure \ref{figure:exercise-1.1.29} represent a function. Assume that the graph continues at both ends beyond the given grid. If the graph represents a function, then determine the following for the graph:
 
+\begin{enumerate}[label=(\alph*)]
+  \item Domain and range
+  \item $ x $-intercept, if any (estimate where necessary)
+  \item $ y $-intercept, if any (estimate where necessary)
+  \item The intervals for which the function is increasing
+  \item The intervals for which the function is decreasing
+  \item The intervals for which the function is constant
+  \item Symmetry about any axis and/or the origin
+  \item Whether the function is even, odd, or neither
+\end{enumerate}
+
 \begin{figure}[H]
   \centering
   \begin{tikzpicture}
@@ -718,17 +729,6 @@ Use the vertical line test to determine whether the graph in figure \ref{figure:
   \caption{Graph for exercise 1.1.29}
   \label{figure:exercise-1.1.29}
 \end{figure}
-
-\begin{enumerate}[label=(\alph*)]
-  \item Domain and range
-  \item $ x $-intercept, if any (estimate where necessary)
-  \item $ y $-intercept, if any (estimate where necessary)
-  \item The intervals for which the function is increasing
-  \item The intervals for which the function is decreasing
-  \item The intervals for which the function is constant
-  \item Symmetry about any axis and/or the origin
-  \item Whether the function is even, odd, or neither
-\end{enumerate}
 
 \subsubsection{Solution}
 
@@ -770,5 +770,22 @@ The graph in figure \ref{figure:exercise-1.1.29} do represent a function because
   \caption{Vertical line test illustration}
   \label{figure:exercise-1.1.29-vertical-line-test}
 \end{figure}
+
+\begin{enumerate}[label=(\alph*)]
+  \item
+    \begin{enumerate}[label=\roman*]
+      \item The function seems to grow rapidly as $ x $ goes towards $ \pm\infty $, but there will still always be a $ y $ value. We conclude that the domain is all real numbers.
+      \item $ y $ is always greater or equal to $ 0 $, this is the range.
+    \end{enumerate}
+  \item $ y $ is zero for $ x = -1 $, and $ x = 1 $, these are the $ x $-intercepts.
+  \item The $ y $-intercept is $ y = 1 $.
+  \item The function is increasing for the intervals $ -1 < x < 0 $ and $ 1 < x < \infty $.
+  \item The function is decreasing for the intervals $ -\infty < x < -1 $ and $ 0 < x < 1 $.
+  \item The function changes from decreasing/increasing when $ x $ is $ -1 $, $ 0 $, and $ 1 $, but there are no intervals for which the function is constant.
+  \item $ (-x, y) $ is on the graph whenever $ (x, y) $ is on the graph, in other words the function is symmetric around the $ y $-axis.
+  \item The function is not odd because $ f(-x) \neq -f(x) $ for all $ x $ in the domain. Take for example $ x = 0.5 $ for which $ f(-x) \approx 0.6 $ and $ -f(x) \approx - 0.6 $.
+
+    The function is even because $ f(-x) = f(x) $ for all x. Take for example  $ x = 0.5 $ for which $ f(-x) \approx 0.6 $ and $ f(x) \approx 0.6 $.
+\end{enumerate}
 
 \end{document}
