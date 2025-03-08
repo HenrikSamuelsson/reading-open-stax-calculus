@@ -10,7 +10,7 @@ A vehicle has a 20-gal tank and gets 15 mpg. The number of miles $ N $ that can 
   \item
     Determine the number of miles the vehicle can travel on (i) a full tank of gas and (ii) 3/4 of a tank of gas.
   \item
-    Determine the domain and range of the function.
+    Determine the (i) domain and (ii) range of the function.
   \item
     Determine how many times the driver had to stop for gas if she has driven a total 578 miles.
 \end{enumerate}
@@ -19,25 +19,34 @@ A vehicle has a 20-gal tank and gets 15 mpg. The number of miles $ N $ that can 
 
 \begin{enumerate}[label = (\alph*)]
   \item
-    A gallon makes the vehicle go 15 miles, this means that the function that describes the number of miles $ N $ that can be driven on $ x $ gallons of gas is $ N(x) = 15x $.
+    A gallon makes the vehicle go 15 miles. This information leads to that the number of miles $ N $ that can be driven on $ x $ gallons of gas is $ N(x) = 15x $. This is formula is a function because it maps each input to exactly on output.
+    \begin{enumerate}[label = (\roman*)]
+      \item
+        A full tank holds 20 gallons. This is our known $ x $, that we can use in the formula from above. The number of miles that can be traveled is $ N(20) = 15 \cdot x = 15 \cdot 20 = 300 $ miles.
+      \item
+        3/4 of the tank is 15 gallons. Again, this is our known $ x $, that we can use in the formula from above. The number of miles that can be traveled is $ N(15) = 15 \cdot x = 15 \cdot 15 = 225 $ miles.
+    \end{enumerate}
   \item
-    TODO
+    \begin{enumerate}[label = (\roman*)]
+      \item
+        The domain of the function is all the different amount of gas that is possible to put in the tank, from empty to full, $ 0 \le x \le 20 $.
+      \item
+        The function between the amount of gas and miles traveled is a linear relation. The more gas we have the further we can travel. With an empty tank we can travel $ N(0) = 15 \cdot x = 15 \cdot 0 = 0 $ miles. With an full tank we can travel $ N(20) = 15 \cdot x = 15 \cdot 20 = 300 $ miles. When we have something in between the extreme values in the tank we will be able to travel in between 0 and 300 miles. The range of the function is hence $ [0,300] $.
+    \end{enumerate}
   \item
-    TODO
-  \item
-    TODO
+    We start bay calculating the number of gallons of gas required for the trip. We solve $ N = 15x $ for $ x $ by dividing both sides by 15, $ x = N/15 $. We now have a relation between number of gallons and distance. Plug in the known distance to calculate number of gallons, $ x = 578 / 15 \approx 39 $ gallons. If assuming that the trip was started with a full tank, holding 20 gallons, we conclude that the driver was $ 39 - 20 = 19 $ gallons short. $ 19 $ being less than one full tank means that driver had to stop at least one time during the trip to fill up the tank.
 \end{enumerate}
 
 \subsubsection*{Answer}
 
 \begin{enumerate}[label = (\alph*)]
   \item
-    TODO
+    $ N(x) = 15x $.
   \item
-    TODO
+    300 miles can be traveled on a full tank of gas. 225 miles can be traveled on 3/4 of a full tank of gas.
   \item
-    TODO
+    Domain: $ 0 \ge x \ge 20 $. Range: $ [0, 300] $.
   \item
-    TODO
+    The driver had to stop for gas refill at least once.
 
 \end{enumerate}
