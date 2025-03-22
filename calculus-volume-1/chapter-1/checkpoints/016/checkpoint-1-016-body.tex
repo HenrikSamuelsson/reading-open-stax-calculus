@@ -1,9 +1,130 @@
-\subsection*{Checkpoint 1.11: Transforming a Function}
+\subsection*{Checkpoint 1.16: Transforming a Function}
 
 \subsubsection*{Instruction}
 
-Describe how the function $ f(x) = -{5x + 2)^2 - 4 $ using the graph of $ y = x^2 $ and a sequence of transformations.
+Describe how the function $ f(x) = -(x + 1)^2 - 4 $ using the graph of $ y = x^2 $ and a sequence of transformations.
 
 \subsubsection*{Solution}
 
+We start with the graph of $ y = x^2 $, see figure \ref{figure:exercise-1.1.16-1}.
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \centering
+    \begin{axis}[
+        axis x line = center,
+        axis y line = center,
+        xlabel = \( x \),
+        ylabel = \( y \),
+        xmin = -5.5, xmax = 5.5,
+        ymin = -5.5, ymax = 5.5,
+        xtick distance = 1,
+        ytick distance = 1,
+        width = .80\textwidth
+      ]
+      \addplot [
+        domain = -3:3,
+        samples = 200,
+      ]
+      {x^2};
+      \addlegendentry{\( x^2 \)}
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Starting point}
+  \label{figure:exercise-1.1.16-1}
+\end{figure}
+
+We shift left by $ 1 $ unit, see figure \ref{figure:exercise-1.1.16-2}.
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \centering
+    \begin{axis}[
+        axis x line = center,
+        axis y line = center,
+        xlabel = \( x \),
+        ylabel = \( y \),
+        xmin = -5.5, xmax = 5.5,
+        ymin = -5.5, ymax = 5.5,
+        xtick distance = 1,
+        ytick distance = 1,
+        width = .80\textwidth,
+      ]
+      \addplot [
+        domain = -4:3,
+        samples = 200,
+      ]
+      {(x + 1)^2};
+      \addlegendentry{\( (x + 1)^2 \)}
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Shift left by $ 1 $}
+  \label{figure:exercise-1.1.16-2}
+\end{figure}
+
+We apply a factor of $ - 1 $, making the graph reflected, see figure \ref{figure:exercise-1.1.16-3}.
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \centering
+    \begin{axis}[
+        axis x line = center,
+        axis y line = center,
+        xlabel = \( x \),
+        ylabel = \( y \),
+        xmin = -5.5, xmax = 5.5,
+        ymin = -5.5, ymax = 5.5,
+        xtick distance = 1,
+        ytick distance = 1,
+        width = .80\textwidth,
+      ]
+      \addplot [
+        domain = -4:3,
+        samples = 200,
+      ]
+    {-(x + 1)^2)};
+    \addlegendentry{\( -(x + 1)^2 \)}
+  \end{axis}
+\end{tikzpicture}
+\caption{Reflect the graph in the $ x $-axis}
+\label{figure:exercise-1.1.16-3}
+\end{figure}
+
+We shift down by $ 4 $ units, see figure \ref{figure:exercise-1.1.16-4}.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  \centering
+  \begin{axis}[
+      axis x line = center,
+      axis y line = center,
+      xlabel = \( x \),
+      ylabel = \( y \),
+      xmin = -5.5, xmax = 5.5,
+      ymin = -5.5, ymax = 5.5,
+      xtick distance = 1,
+      ytick distance = 1,
+      width = .80\textwidth,
+    ]
+    \addplot [
+      domain = -5.5:5.5,
+      samples = 200,
+    ]
+    {-(x + 1)^2 - 4};
+    \addlegendentry{\( -(x + 1)^2 - 4 \)}
+  \end{axis}
+\end{tikzpicture}
+\caption{Shift down by $ 4 $}
+\label{figure:exercise-1.1.16-4}
+\end{figure}
+
+We have now applied all needed transformations.
+
 \subsubsection*{Answer}
+
+Shift the graph $ y = x^2 $ to the left $ 1 $unit, reflect about the $ x $
+-axis, then shift down $ 4 $ units.
