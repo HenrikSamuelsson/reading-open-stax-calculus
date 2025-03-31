@@ -13,7 +13,10 @@
 
 \begin{enumerate}[label=(\alph*)]
   \item
-    \begin{center}
+    We start by sketching an unit circle with the angle $ 3\pi/4 $, see figure \ref{figure:checkpoint-1.1.18-a}. We know that $ cos(3\pi/4) $ is defined to be the $ x $-coordinate of the point sketched on the unit circle.
+
+    \begin{figure}
+      \centering
       \begin{tikzpicture}[scale=3]
         % Draw the unit circle
         \draw[thick] (0,0) circle(1);
@@ -33,8 +36,11 @@
         \draw[thick,->] (0.2,0) arc[start angle=0,end angle=135,radius=0.2];
         \node at (0.3,0.3) {\footnotesize $\frac{3\pi}{4}$};
       \end{tikzpicture}
-    \end{center}
-    TODO
+      \caption{Unit circle with point at angle $ 3\pi/4 $}
+      \label{figure:checkpoint-1.1.18-a}
+    \end{figure}
+
+    We can see a right triangle in the picture. We know that this triangle will have equal base and height, due to that our angle splits fourth quadrant exactly in half. We also know that the hypotenuse is $ 1 $, because of the unit circle with radius $ 1 $. The Pythagorean theorem gives us $ 1^2 = \sqrt{x^2 + x^2} $, which after some calculations leads us to that $ x = \pm\sqrt{2}/2 $. We can see from the figure that $ x $ will be negative which leads to that $ cos(3\pi/4) = -\sqrt{2}/2 $
   \item
     TODO
 \end{enumerate}
@@ -43,7 +49,7 @@
 
 \begin{enumerate}[label=(\alph*)]
   \item
-    TODO
+    $ cos(3\pi/4) = -\sqrt{2}/2 $.
   \item
     TODO
 \end{enumerate}
