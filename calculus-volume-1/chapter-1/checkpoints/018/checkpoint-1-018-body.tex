@@ -13,34 +13,67 @@
 
 \begin{enumerate}[label=(\alph*)]
   \item
-    We start by sketching an unit circle with the angle $ 3\pi/4 $, see figure \ref{figure:checkpoint-1.1.18-a}. We know that $ cos(3\pi/4) $ is defined to be the $ x $-coordinate of the point sketched on the unit circle.
+    We start by sketching an unit circle with the angle $ 3\pi/4 $, see figure \ref{figure:checkpoint-1.1.18-a-1}. We know that $ cos(3\pi/4) $ is defined to be the $ x $-coordinate of the point sketched on the unit circle.
 
     \begin{figure}
       \centering
-      \begin{tikzpicture}[scale=3]
+      \begin{tikzpicture}[scale=3, font=\large]
+        % Define angle in degrees
+        \pgfmathsetmacro{\angle}{135}
+        \pgfmathsetmacro{\x}{cos(\angle)}
+        \pgfmathsetmacro{\y}{sin(\angle)}
+
         % Draw the unit circle
         \draw[thick] (0,0) circle(1);
 
         % Axes
-        \draw[->] (-1.2,0) -- (1.2,0) node[right] {\footnotesize $x$};
-        \draw[->] (0,-1.2) -- (0,1.2) node[above] {\footnotesize $y$};
+        \draw[->] (-1.2,0) -- (1.2,0) node[right] {$x$};
+        \draw[->] (0,-1.2) -- (0,1.2) node[above] {$y$};
 
-        % Angle 3π/4 (135 degrees)
-        \draw[thick] (0,0) -- (-0.7071,0.7071);
-        \filldraw (-0.7071,0.7071) circle(0.03) node[above left] {\footnotesize $(\cos \frac{3\pi}{4}, \sin \frac{3\pi}{4})$};
+        % Point at 3π/4
+        \draw[thick] (0,0) -- (\x,\y);
+        \filldraw (\x,\y) circle(0.03) node[above left] {$(\cos \frac{3\pi}{4}, \sin \frac{3\pi}{4})$};
 
-        % Draw the cosine value as a horizontal projection
-        \draw[dashed] (-0.7071,0.7071) -- (-0.7071,0) node[below left] {\footnotesize $\cos \frac{3\pi}{4}$};
+        % Cosine projection
+        \draw[dashed] (\x,\y) -- (\x,0) node[below] {$\cos \frac{3\pi}{4}$};
 
-        % Mark the angle
-        \draw[thick,->] (0.2,0) arc[start angle=0,end angle=135,radius=0.2];
-        \node at (0.3,0.3) {\footnotesize $\frac{3\pi}{4}$};
+        % Angle marking
+        \draw[thick,->] (0.2,0) arc[start angle=0,end angle=\angle,radius=0.2];
+        \node at (0.4,0.3) {$\frac{3\pi}{4}$};
+
       \end{tikzpicture}
       \caption{Unit circle with point at angle $ 3\pi/4 $}
-      \label{figure:checkpoint-1.1.18-a}
+      \label{figure:checkpoint-1.1.18-a-1}
     \end{figure}
 
     We can see a right triangle in the picture. We know that this triangle will have equal base and height, due to that our angle splits fourth quadrant exactly in half. We also know that the hypotenuse is $ 1 $, because of the unit circle with radius $ 1 $. The Pythagorean theorem gives us $ 1^2 = \sqrt{x^2 + x^2} $, which after some calculations leads us to that $ x = \pm\sqrt{2}/2 $. We can see from the figure that $ x $ will be negative which leads to that $ cos(3\pi/4) = -\sqrt{2}/2 $
+
+    \begin{figure}
+      \centering
+      \begin{tikzpicture}[scale=3, font=\large]
+        % Draw the unit circle
+        \draw[thick] (0,0) circle(1);
+
+        % Axes
+        \draw[->] (-1.2,0) -- (1.2,0) node[right] {$x$};
+        \draw[->] (0,-1.2) -- (0,1.2) node[above] {$y$};
+
+        % Angle 3π/4 (135 degrees)
+        \draw[thick] (0,0) -- (-0.7071,0.7071);
+        \filldraw (-0.7071,0.7071) circle(0.03) node[above left] {$(\cos \frac{3\pi}{4}, \sin \frac{3\pi}{4})$};
+
+        % Draw the cosine value as a horizontal projection
+        \draw[dashed] (-0.7071,0.7071) -- (-0.7071,0) node[below] {$\cos \frac{3\pi}{4}$};
+
+        % Mark the opposite angle of 3pi/4 rad
+        \draw[thick,->] (-0.2,0) arc[start angle=180,end angle=135,radius=0.2];
+        \node at (-0.35, 0.15) {$\frac{\pi}{4}$};
+
+      \end{tikzpicture}
+      \caption{Unit circle with point at the supplementary angle $ \pi/4 $}
+      \label{figure:checkpoint-1.1.18-a-2}
+    \end{figure}
+
   \item
     TODO
 \end{enumerate}
