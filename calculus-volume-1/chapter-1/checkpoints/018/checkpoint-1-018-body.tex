@@ -15,9 +15,9 @@
   \item
     We start by sketching an unit circle with the angle $ 3\pi/4 $, see figure \ref{figure:checkpoint-1.1.18-a-1}. We know that $ cos(3\pi/4) $ is defined to be the $ x $-coordinate of the point sketched on the unit circle.
 
-    \begin{figure}
+    \begin{figure}[h]
       \centering
-      \begin{tikzpicture}[scale=3, font=\large]
+      \begin{tikzpicture}[scale=2.5, font=\large]
         % Define angle in degrees
         \pgfmathsetmacro{\angle}{135}
         \pgfmathsetmacro{\x}{cos(\angle)}
@@ -46,11 +46,11 @@
       \label{figure:checkpoint-1.1.18-a-1}
     \end{figure}
 
-    There is a table with cosine values in given in the book that this exercise is taken from, but it only covers values from the first quadrant and our angle is in the third quadrant. But we can find the supplementary angle to our angle that will be $ \pi - 3\pi/4 = \pi/4 $ as shown in figure \ref{figure:checkpoint-1.1.18-a-2}. We know from the table of cosine values given in the book that $ cos(\pi/4) = \sqrt{2}/2 $. It follows that we value that we are looking for will be the same but negative since our angle is mirrored in the $y$-axle. We can conclude that $ cos(3\pi/4) $ equals $ -\sqrt{2}/2 $.
+    There is a table with cosine values in given in the book that this exercise is taken from, but it only covers values from the first quadrant and our angle is in the third quadrant. But we can find the supplementary angle to our angle that will be $ \pi - 3\pi/4 = \pi/4 $ as shown in figure \ref{figure:checkpoint-1.1.18-a-2}.
 
-    \begin{figure}
+    \begin{figure}[h]
       \centering
-      \begin{tikzpicture}[scale=3, font=\large]
+      \begin{tikzpicture}[scale=2.5, font=\large]
         % Draw the unit circle
         \draw[thick] (0,0) circle(1);
 
@@ -74,6 +74,7 @@
       \label{figure:checkpoint-1.1.18-a-2}
     \end{figure}
 
+    We know from the table of cosine values given in the book that $ cos(\pi/4) = \sqrt{2}/2 $. It follows that we value that we are looking for will be the same but negative since our angle is mirrored in the $y$-axle. We conclude that $ cos(3\pi/4) $ equals $ -\sqrt{2}/2 $.
   \item
     TODO
 \end{enumerate}
@@ -84,5 +85,37 @@
   \item
     $ cos(3\pi/4) = -\sqrt{2}/2 $.
   \item
-    TODO
+    \begin{figure}[h]
+      \centering
+      \begin{tikzpicture}[scale=2.5, font=\large]
+        % Define angle in degrees
+        \pgfmathsetmacro{\angle}{-30} % -pi/6 = -30 degrees
+        \pgfmathsetmacro{\x}{cos(\angle)}
+        \pgfmathsetmacro{\y}{sin(\angle)}
+
+        % Draw the unit circle
+        \draw[thick] (0,0) circle(1);
+
+        % Axes
+        \draw[->] (-1.2,0) -- (1.2,0) node[right] {$ x $};
+        \draw[->] (0,-1.2) -- (0,1.2) node[above] {$ y $};
+
+        % Draw angle line
+        \draw[thick] (0,0) -- (\x,\y);
+        \filldraw (\x,\y) circle(0.03)
+        node[below right, xshift=4pt, yshift=-4pt]
+        {$(\cos \frac{-\pi}{6}, \sin \frac{-\pi}{6})$};
+
+        % Dashed projection to the y axis
+        \draw[dashed] (\x,\y) -- (0,\y) node[left, xshift=-4pt]
+        {$\sin \frac{-\pi}{6}$};
+
+        % Angle marking (clockwise)
+        \draw[thick,->] (0.2,0) arc[start angle=0, end angle=\angle, radius=0.2];
+        \node at (0.5,-0.2) {$-\frac{\pi}{6}$};
+
+      \end{tikzpicture}
+      \caption{Unit circle with point at angle $ -\pi/6 $}
+      \label{figure:unit-circle-neg-pi-6}
+    \end{figure}
 \end{enumerate}
