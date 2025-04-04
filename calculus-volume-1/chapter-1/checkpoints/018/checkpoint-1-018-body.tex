@@ -15,7 +15,7 @@
   \item
     We start by sketching an unit circle with the angle $ 3\pi/4 $, see figure \ref{figure:checkpoint-1.1.18-a-1}. We know that $ cos(3\pi/4) $ is defined to be the $ x $-coordinate of the point sketched on the unit circle.
 
-    \begin{figure}[h]
+    \begin{figure}[H]
       \centering
       \begin{tikzpicture}[scale=2.5, font=\large]
         % Define angle in degrees
@@ -48,7 +48,7 @@
 
     There is a table with cosine values in given in the book that this exercise is taken from, but it only covers values from the first quadrant and our angle is in the third quadrant. But we can find the supplementary angle to our angle that will be $ \pi - 3\pi/4 = \pi/4 $ as shown in figure \ref{figure:checkpoint-1.1.18-a-2}.
 
-    \begin{figure}[h]
+    \begin{figure}[H]
       \centering
       \begin{tikzpicture}[scale=2.5, font=\large]
         % Draw the unit circle
@@ -76,16 +76,9 @@
 
     We know from the table of cosine values given in the book that $ cos(\pi/4) = \sqrt{2}/2 $. It follows that we value that we are looking for will be the same but negative since our angle is mirrored in the $y$-axle. We conclude that $ cos(3\pi/4) $ equals $ -\sqrt{2}/2 $.
   \item
-    TODO
-\end{enumerate}
+    We start by sketching an unit circle with the angle $ -\pi/6 $, see figure \ref{figure:checkpoint-1.1.18-b}. We know that $ sin(-\pi/6) $ is defined to be the $ y $-coordinate of the point sketched on the unit circle.
 
-\subsubsection*{Answer}
-
-\begin{enumerate}[label=(\alph*)]
-  \item
-    $ cos(3\pi/4) = -\sqrt{2}/2 $.
-  \item
-    \begin{figure}[h]
+    \begin{figure}[H]
       \centering
       \begin{tikzpicture}[scale=2.5, font=\large]
         % Define angle in degrees
@@ -112,10 +105,21 @@
 
         % Angle marking (clockwise)
         \draw[thick,->] (0.2,0) arc[start angle=0, end angle=\angle, radius=0.2];
-        \node at (0.5,-0.2) {$-\frac{\pi}{6}$};
+        \node at (0.5,-0.15) {$-\frac{\pi}{6}$};
 
       \end{tikzpicture}
       \caption{Unit circle with point at angle $ -\pi/6 $}
-      \label{figure:unit-circle-neg-pi-6}
+      \label{figure:checkpoint-1.1.18-b}
     \end{figure}
+
+    There is a table in the book with some common sinus values. The value for $ sin(-\pi/6) $ is not in the table but it is stated in the table that $ sin(\pi/6) = 1/2 $. This value is related to the value we are looking for, difference being that our value is mirrored in the $x$-axis. The answer is hence the additive inverse, $-1/2$.
+\end{enumerate}
+
+\subsubsection*{Answer}
+
+\begin{enumerate}[label=(\alph*)]
+  \item
+    $ cos(3\pi/4) = -\sqrt{2}/2 $.
+  \item
+    $ sin(-\pi/6) = -1/2 $.
 \end{enumerate}
