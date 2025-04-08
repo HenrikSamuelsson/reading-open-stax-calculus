@@ -1,0 +1,42 @@
+\subsection*{Checkpoint 1.23: Placing a Ladder}
+
+\subsubsection*{Instruction}
+
+Is the function $ f $ graphed in figure \ref{figure:checkpoint-1.23-1} one-to-one?
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \centering
+    \begin{axis}[
+        axis x line = center,
+        axis y line = center,
+        xlabel = \( x \),
+        ylabel = \( y \),
+        xmin = -3, xmax = 3,
+        ymin = -3, ymax = 3,
+        xtick distance = 1,
+        ytick distance = 1,
+        width = .80\textwidth,
+        legend pos = south east,
+        enlargelimits
+      ]
+      \addplot [
+        domain = -2:2,
+        samples = 200,
+      ]
+      {x^3 - x};
+      \addlegendentry{\( f(x) = x^3 - x \)}
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Graph for checkpoint 1.23}
+  \label{figure:checkpoint-1.23-1}
+\end{figure}
+
+\subsubsection*{Solution}
+
+TODO
+
+\subsubsection*{Answer}
+
+TODO
