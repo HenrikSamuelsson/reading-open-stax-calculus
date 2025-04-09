@@ -13,13 +13,16 @@ Is the function $ f $ graphed in figure \ref{figure:checkpoint-1.23-1} one-to-on
         axis y line = center,
         xlabel = \( x \),
         ylabel = \( y \),
-        xmin = -3, xmax = 3,
-        ymin = -3, ymax = 3,
+        xmin = -2, xmax = 2,
+        ymin = -2, ymax = 2,
         xtick distance = 1,
         ytick distance = 1,
         width = .80\textwidth,
         legend pos = south east,
-        enlargelimits
+        enlargelimits,
+        legend style={
+          font=\small
+        }
       ]
       \addplot [
         domain = -2:2,
@@ -35,8 +38,54 @@ Is the function $ f $ graphed in figure \ref{figure:checkpoint-1.23-1} one-to-on
 
 \subsubsection*{Solution}
 
-TODO
+The function is not-one-to because it does not pass the horizontal line test. One example being the line $ y = 0.25 $, see figure \ref{figure:checkpoint-1.23-2} how this line intersects the graph in three places.
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        axis x line=middle,
+        axis y line=middle,
+        axis line style={->},
+        xlabel=\( x \),
+        ylabel=\( y \),
+        xmin=-2, xmax=2,
+        ymin=-2, ymax=2,
+        xtick distance=1,
+        ytick distance=1,
+        minor tick num=1,
+        width=.80\textwidth,
+        enlargelimits,
+        legend pos=south east,
+        legend style={
+          font=\small
+        }
+      ]
+      % Original function
+      \addplot [
+        domain=-2:2,
+        samples=200,
+        thick,
+      ]
+      {x^3 - x};
+      \addlegendentry{\( y = x^3 - x \)}
+
+      % Horizontal line showing it's not one-to-one
+      \addplot [
+        domain=-2.5:2.5,
+        samples=2,
+        thick,
+        dashed
+      ]
+      {0.25};
+      \addlegendentry{\( y = 0.25 \)}
+
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Horizontal line test show that function is not one-to-one}
+  \label{figure:checkpoint-1.23-2}
+\end{figure}
 
 \subsubsection*{Answer}
 
-TODO
+No.
