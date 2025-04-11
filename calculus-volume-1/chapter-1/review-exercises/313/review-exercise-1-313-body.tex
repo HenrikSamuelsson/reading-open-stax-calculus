@@ -1,0 +1,65 @@
+\subsection*{Review Exercise 1.313}
+
+\subsubsection*{Instruction}
+
+Is it true or false that a relation passing the horizontal line test is a function.
+
+\subsubsection*{Solution}
+
+The relation \( x = y^2 \) passes the horizontal line test but fails the vertical line test, note how the vertical line in figure \ref{fig:review-exercise-313-sideways-parabola} intersects the graph at two places. Having found a relation that pass the horizontal line test but fails the vertical line test shows that it is false that a relation passing the horizontal line test is (always) a function.
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        axis x line=middle,
+        axis y line=middle,
+        axis line style={->},
+        xlabel=\( x \),
+        ylabel=\( y \),
+        xmin=-1, xmax=4,
+        ymin=-2, ymax=2,
+        xtick distance=1,
+        ytick distance=1,
+        width=0.8\textwidth,
+        enlargelimits,
+        legend style={
+          at={(1,1)},   % Position the legend at the top right corner
+          anchor=north east,  % Anchor the legend's top right corner to the given position
+          draw=black,   % Adds a border around the legend
+          fill=none,    % Transparent background
+          font=\small,
+          rounded corners=5pt,  % Optional: rounded corners for the frame
+          inner sep=5pt,        % Optional: padding inside the frame
+          xshift=0.0cm,        % Offset the legend horizontally
+          yshift=-2.0cm       % Offset the legend vertically
+        }
+      ]
+
+      % Sideways parabola: x = y^2
+      \addplot[
+        domain=-2:2,
+        samples=200,
+        thick,
+        black
+      ] ({x^2}, x);
+      \addlegendentry{\( x = y^2 \)}
+
+      % Vertical line at x = 1 (using coordinates for vertical line)
+      \addplot[
+        domain=-2:2,
+        samples=2,
+        dashed,
+        black
+      ] coordinates {(1.5,-2) (1.5,2)};
+      \addlegendentry{\( x = 1.5 \)}
+
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Sideways parabola that fails the vertical line test}
+  \label{fig:review-exercise-313-sideways-parabola}
+\end{figure}
+
+\subsubsection*{Answer}
+
+False.
